@@ -282,122 +282,6 @@
 
 
   
-    <article id="post-hexo随笔" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/01/hexo%E9%9A%8F%E7%AC%94/">hexo随笔</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/01/hexo%E9%9A%8F%E7%AC%94/" class="archive-article-date">
-  	<time datetime="2020-01-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="hexo随笔"><a href="#hexo随笔" class="headerlink" title="hexo随笔"></a><strong>hexo随笔</strong></h2><h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><p><strong>· hexo</strong>是一个快速、简介且高效的博客框架，可以理解为基于<strong>node.js</strong>制作的一个博客工具<br><strong>· hexo</strong>正常情况下不需要部署到我们的服务器上，我们的服务器上保存的，其实是基于hexo通过markdown编写的文章，然后hexo帮助我们生成<strong>静态的html页面</strong>，然后将生成的html上传到我们的服务器。<br><strong>·</strong> 简而言之，<strong>hexo</strong>是一个<strong>静态页面_</strong>生成<em>、</em>上传<em>的<em>_工具</em></em>  </p>
-<h3 id="二、源码结构："><a href="#二、源码结构：" class="headerlink" title="二、源码结构："></a>二、源码结构：</h3><p><img src="/2020/02/01/hexo%E9%9A%8F%E7%AC%94/hexo_%E6%BA%90%E7%A0%81%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" alt="源码结构图">  </p>
-<hr>
-<table>
-<thead>
-<tr>
-<th align="left">文件/文件夹</th>
-<th align="left">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">_config.yml</td>
-<td align="left">配置文件</td>
-</tr>
-<tr>
-<td align="left">package.json</td>
-<td align="left">框架的基本参数信息和它所依赖的插件，在npm安装时使用的–save保存进去</td>
-</tr>
-<tr>
-<td align="left">public</td>
-<td align="left">生成的静态文件，这个目录最终会发布到服务器</td>
-</tr>
-<tr>
-<td align="left">scaffolds</td>
-<td align="left">一些通用的makedown模板</td>
-</tr>
-<tr>
-<td align="left">source</td>
-<td align="left">编写的makedown文件，_drafts草稿文件，_posts发布的文章</td>
-</tr>
-<tr>
-<td align="left">themes</td>
-<td align="left">博客的模板</td>
-</tr>
-</tbody></table>
-<h3 id="三、安装"><a href="#三、安装" class="headerlink" title="三、安装"></a>三、安装</h3><h4 id="1-安装前提"><a href="#1-安装前提" class="headerlink" title="1. 安装前提"></a>1. 安装前提</h4><p><strong>·</strong> <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> (版本不得低于8.10，建议使用10.0及以上版本)<br><strong>·</strong> <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Git</a></p>
-<h4 id="2-安装Git"><a href="#2-安装Git" class="headerlink" title="2. 安装Git"></a>2. 安装Git</h4><p><strong>. Windows</strong>：下载并安装<a href="https://git-scm.com/" target="_blank" rel="noopener">git</a>(可用<a href="https://npm.taobao.org/mirrors/git-for-windows/" target="_blank" rel="noopener">淘宝镜像</a>来下载)<br><strong>· Mac</strong>：使用<a href="http://mxcl.github.com/homebrew/" target="_blank" rel="noopener">Homebrew</a>，<a href="https://www.macports.org/" target="_blank" rel="noopener">MacPorts</a>或者下载<a href="http://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="noopener">安装程序</a><br><strong>· Linux(Ubuntu，Debian)</strong>：<code>sudo apt-get install git-core</code><br><strong>· Linux(Fedora，Red Hat，CentOS)</strong>：<code>sudo yum install git-core</code>  </p>
-<h4 id="3-安装Node-js"><a href="#3-安装Node-js" class="headerlink" title="3. 安装Node.js"></a>3. 安装Node.js</h4><p>Node.js为大多数平台提供了官方的<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">安装程序</a>，国内依旧可以使用<a href="https://npm.taobao.org/mirrors/node" target="_blank" rel="noopener">淘宝镜像Node.js镜像</a>来下载。  </p>
-<p>其他安装方法：<br><strong>· windows</strong>：通过<a href="https://github.com/jasongin/nvs/" target="_blank" rel="noopener">nvs</a>(推荐)或者<a href="https://github.com/nvm-sh/nvm" target="_blank" rel="noopener">nvm</a>来安装<br><strong>· Mac</strong>：使用<a href="https://brew.sh/" target="_blank" rel="noopener">Homebrew</a>或<a href="http://www.macports.org/" target="_blank" rel="noopener">MacPorts</a>安装<br><strong>· Linux(DEB/RPM-based)</strong>：从<a href="https://github.com/nodesource/distributions" target="_blank" rel="noopener">NodeSource</a>安装<br><strong>· 其他</strong>：使用相应的软件包管理器进行安装，可以参考由Node.js提供的<a href="https://nodejs.org/en/download/package-manager/" target="_blank" rel="noopener">指导</a>  </p>
-<p>ps：①　对于<strong>Mac/Linux</strong>同样建议使用nvs或nvm，以避免可能会出现的各种权限问题<br>　　②　对于<strong>Windows用户</strong>，使用Node.js官方安装程序时，请确保勾选<strong>Add to   PATH</strong>选项(默认已经勾选)<br>　　③　对于<strong>Mac/Linux用户</strong>，如果在尝试安装Hexo过程中出现<code>EACCES</code>权限错误，请遵循<a href="https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally" target="_blank" rel="noopener">由npmjs发布的指导</a>修复该问题；强烈建议<strong>不要</strong>使用root、sudo等方法覆盖权限  </p>
-<h4 id="4-安装Hexo"><a href="#4-安装Hexo" class="headerlink" title="4. 安装Hexo"></a>4. 安装Hexo</h4><p>所有必备的应用程序安装完成后，即可使用npm安装Hexo。</p>
-<p><code>npm install -g hexo-cli</code>  </p>
-<h4 id="5-Hexo的使用"><a href="#5-Hexo的使用" class="headerlink" title="5. Hexo的使用"></a>5. Hexo的使用</h4><p>安装以后，可以使用以下两种方式执行Hexo：<br>I. <code>npx hexo &lt;command&gt;</code><br>II. 将Hexo所在的目录下的<code>node_modules</code>添加到环境变量之中，即可直接使用<code>hexo &lt;command&gt;</code>  </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">hexo 博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/01/hexo%E9%9A%8F%E7%AC%94/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -644,10 +528,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">hexo 博客</a>
-              </li>
             
             <div class="clearfix"></div>
           </ul>
