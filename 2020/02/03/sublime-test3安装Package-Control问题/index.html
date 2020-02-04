@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/2020/02/03/sublime-test3%E5%AE%89%E8%A3%85Package-Control%E9%97%AE%E9%A2%98/%E5%9B%BE_4.png">
 <meta property="og:image" content="http://yoursite.com/2020/02/03/sublime-test3%E5%AE%89%E8%A3%85Package-Control%E9%97%AE%E9%A2%98/%E5%9B%BE_5.png">
 <meta property="article:published_time" content="2020-02-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-04T12:38:28.474Z">
+<meta property="article:modified_time" content="2020-02-04T14:20:12.144Z">
 <meta property="article:author" content="sophistic-cat">
 <meta property="article:tag" content="sublime">
 <meta property="article:tag" content="插件">
@@ -187,7 +187,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一.　简介"></a>一.　简介</h2><p>①　最近开始使用sublime text3来进行文本编辑、写写脚本什么的，之前用过sublime text2，但是插件这部分一直没捣鼓，导致之前用的也就是像个好看点的记事本:sleepy :，而sublime的<strong>插件扩展机制</strong>是通过<strong>Package Control</strong>来实现的；<br>②　sublime的插件机制类似于Chrome浏览器的插件，用来扩展功能；而今天要说的Package Control则是用来为Sublime安装其他插件的插件，类似于Python的pip  </p>
-<h2 id="二-安装"><a href="#二-安装" class="headerlink" title="二.　安装"></a>二.　安装</h2><h3 id="1-方法一：（在线安装）"><a href="#1-方法一：（在线安装）" class="headerlink" title="1. 方法一：（在线安装）"></a>1. 方法一：（在线安装）</h3><p>打开sublime text3，按<code>CTRL+`</code>调出console，将下述代码粘贴到命令行中，直接Enter执行：  </p>
+<h2 id="二-安装"><a href="#二-安装" class="headerlink" title="二.　安装"></a>二.　安装</h2><a id="more"></a>
+<h3 id="1-方法一：（在线安装）"><a href="#1-方法一：（在线安装）" class="headerlink" title="1. 方法一：（在线安装）"></a>1. 方法一：（在线安装）</h3><p>打开sublime text3，按<code>CTRL+`</code>调出console，将下述代码粘贴到命令行中，直接Enter执行：  </p>
 <p><code>import urllib.request,os,hashlib; h = &#39;6f4c264a24d933ce70df5dedcf1dcaee&#39; + &#39;ebe013ee18cced0ef93d5f746d80ef60&#39;; pf = &#39;Package Control.sublime-package&#39;; ipp  = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &#39;http://packagecontrol.io/&#39; + pf.replace(&#39; &#39;, &#39;%20&#39;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&#39;Error validating download (got %s instead of %s), please try           manual install&#39; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &#39;wb&#39; ).write(by)</code>  </p>
 <p>但是这个方法最后失败，sublime一直卡住，没有响应</p>
 <h3 id="2-方法二：-离线安装"><a href="#2-方法二：-离线安装" class="headerlink" title="2.方法二：(离线安装)"></a>2.方法二：(离线安装)</h3><p>下载地址：<a href="https://github.com/wbond/package_control" target="_blank" rel="noopener">https://github.com/wbond/package_control</a></p>

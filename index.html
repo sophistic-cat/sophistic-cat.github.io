@@ -179,42 +179,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一.　简介"></a>一.　简介</h2><p>①　最近开始使用sublime text3来进行文本编辑、写写脚本什么的，之前用过sublime text2，但是插件这部分一直没捣鼓，导致之前用的也就是像个好看点的记事本:sleepy :，而sublime的<strong>插件扩展机制</strong>是通过<strong>Package Control</strong>来实现的；<br>②　sublime的插件机制类似于Chrome浏览器的插件，用来扩展功能；而今天要说的Package Control则是用来为Sublime安装其他插件的插件，类似于Python的pip  </p>
-<h2 id="二-安装"><a href="#二-安装" class="headerlink" title="二.　安装"></a>二.　安装</h2><h3 id="1-方法一：（在线安装）"><a href="#1-方法一：（在线安装）" class="headerlink" title="1. 方法一：（在线安装）"></a>1. 方法一：（在线安装）</h3><p>打开sublime text3，按<code>CTRL+`</code>调出console，将下述代码粘贴到命令行中，直接Enter执行：  </p>
-<p><code>import urllib.request,os,hashlib; h = &#39;6f4c264a24d933ce70df5dedcf1dcaee&#39; + &#39;ebe013ee18cced0ef93d5f746d80ef60&#39;; pf = &#39;Package Control.sublime-package&#39;; ipp  = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &#39;http://packagecontrol.io/&#39; + pf.replace(&#39; &#39;, &#39;%20&#39;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&#39;Error validating download (got %s instead of %s), please try           manual install&#39; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &#39;wb&#39; ).write(by)</code>  </p>
-<p>但是这个方法最后失败，sublime一直卡住，没有响应</p>
-<h3 id="2-方法二：-离线安装"><a href="#2-方法二：-离线安装" class="headerlink" title="2.方法二：(离线安装)"></a>2.方法二：(离线安装)</h3><p>下载地址：<a href="https://github.com/wbond/package_control" target="_blank" rel="noopener">https://github.com/wbond/package_control</a></p>
-<ol>
-<li>点击上面的链接，去github下载Package  Control安装包下载到本地，下载到的文件为<strong>package_control-master.zip</strong>，将其解压后的文件夹重命名为<strong>Package Control</strong>；</li>
-<li>打开Sublime，选择<code>Preferences-&gt;Browse Pacakges菜单</code>，如图1，将上面的改好名字的Package Control文件夹复制过去，如图2，之后重启Sublime  ；</li>
-</ol>
-<p><img src="/2020/02/03/sublime-test3%E5%AE%89%E8%A3%85Package-Control%E9%97%AE%E9%A2%98/%E5%9B%BE_1.png" alt="图一"></p>
-<center>图一</center>  
-
-<hr>
-<p><img src="/2020/02/03/sublime-test3%E5%AE%89%E8%A3%85Package-Control%E9%97%AE%E9%A2%98/%E5%9B%BE_2.png" alt="图二">  </p>
-<center>图二</center>  
-
-<hr>
-<ol start="3">
-<li>重启之后，可在<strong>Preferences选项</strong>下看到<strong>Package Control</strong>和<strong>Package Settings</strong>，说明安装成功，如图三；  </li>
-</ol>
-<p><img src="/2020/02/03/sublime-test3%E5%AE%89%E8%A3%85Package-Control%E9%97%AE%E9%A2%98/%E5%9B%BE_3.png" alt="图三">  </p>
-<center>图三</center>
-
-<hr>
-<ol start="4">
-<li>在这里我出现了个大问题，即使上面已经安装成功了，但是，按<code>CTRL+shift+P</code>(或者<code>Tools-&gt;Command Paletter</code>)在跳出的输入栏中输入<code>Install Package</code>却会出现<strong>There are no packages available for installation</strong>的错误提示，试了多种办法后最终解决；</li>
-</ol>
-<p><strong><em>解决方法：</em></strong><br>a. 下载一个<a href="https://pan.baidu.com/s/1is6SVhhUoOMJgV1og5ZLeg" target="_blank" rel="noopener">channel_v3.json</a>文件;<br>b. 下载完成后，打开Sublime的<code>Perferences-&gt;Package Settings-&gt;Package Control-&gt;Settings-User</code>，如图四所示，之后添加如下代码:<code>&quot;channels&quot;:[&quot;&lt;这里是上面下载的channel_vs.json的文件路径&gt;&quot;]</code>，如图五所示；  </p>
-<p><img src="/2020/02/03/sublime-test3%E5%AE%89%E8%A3%85Package-Control%E9%97%AE%E9%A2%98/%E5%9B%BE_4.png" alt="图四">  </p>
-<center>图四</center>
-
-<hr>
-<p><img src="/2020/02/03/sublime-test3%E5%AE%89%E8%A3%85Package-Control%E9%97%AE%E9%A2%98/%E5%9B%BE_5.png" alt="图五">  </p>
-<center>图五</center>  
-
-<hr>
-
+<h2 id="二-安装"><a href="#二-安装" class="headerlink" title="二.　安装"></a>二.　安装</h2>
+        
       
 
       
@@ -353,7 +319,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><p><strong>· hexo</strong>是一个快速、简介且高效的博客框架，可以理解为基于<strong>node.js</strong>制作的一个博客工具<br><strong>· hexo</strong>正常情况下不需要部署到我们的服务器上，我们的服务器上保存的，其实是基于hexo通过markdown编写的文章，然后hexo帮助我们生成<strong>静态的html页面</strong>，然后将生成的html上传到我们的服务器。<br><strong>·</strong> 简而言之，<strong>hexo</strong>是一个<strong>静态页面_</strong>生成<em>、</em>上传<em>的<em>_工具</em></em>  </p>
+        <h3 id="一、简介："><a href="#一、简介：" class="headerlink" title="一、简介："></a>一、简介：</h3><p><strong>· hexo</strong>是一个快速、简介且高效的博客框架，可以理解为基于<strong>node.js</strong>制作的一个博客工具<br><strong>· hexo</strong>正常情况下不需要部署到我们的服务器上，我们的服务器上保存的，其实是基于hexo通过markdown编写的文章，然后hexo帮助我们生成<strong>静态的html页面</strong>，然后将生成的html上传到我们的服务器。<br><strong>·</strong> 简而言之，<strong>hexo</strong>是一个<strong>静态页面</strong> <em>生成、上传的工具</em>    </p>
         
       
 
