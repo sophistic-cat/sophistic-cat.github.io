@@ -178,6 +178,32 @@
         
       </header>
     
+
+    
+        <section id="comments" class="comments">
+            <style>
+              .comments{margin:30px;padding:10px;background:#fff}
+              @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+            </style>
+            <div class="valine_comment"></div>
+<!--载入js，在</body>之前插入即可-->
+<!--Leancloud 操作库:-->
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<!--Valine 的核心代码库-->
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+      el: '.valine_comment',
+      app_id: 'uBIUFHMjKS41tFhdWI7FxU9u-gzGzoHsz',
+      app_key: 'fvgK3DMelXfVPROcn9bk5Kdb',
+      placeholder: '这里留言。。',
+      notify: 'true',
+      verify: 'true',
+    });
+</script>
+        </section>
+    
+
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Python惯例"><a href="#Python惯例" class="headerlink" title="Python惯例"></a>Python惯例</h2><p>“惯例”这个词指的是“习惯的做法，常规的办法，一贯的做法”，与这个词对应的英文单词叫“idiom”。由于Python跟其他很多编程语言在语法和使用上还是有比较显著的差别，因此作为一个Python开发者如果不能掌握这些惯例，就无法写出“Pythonic”的代码。下面我们总结了一些在Python开发中的惯用的代码。</p>
@@ -223,29 +249,6 @@
         </div>
       
 
-      
-        <section id="comments" class="comments">
-            <style>
-              .comments{margin:30px;padding:10px;background:#fff}
-              @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
-            </style>
-            <div class="valine_comment"></div>
-<!--载入js，在</body>之前插入即可-->
-<!--Leancloud 操作库:-->
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<!--Valine 的核心代码库-->
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script>
-  new Valine({
-      el: '.valine_comment',
-      app_id: 'uBIUFHMjKS41tFhdWI7FxU9u-gzGzoHsz',
-      app_key: 'fvgK3DMelXfVPROcn9bk5Kdb',
-      placeholder: '这里留言。。',
-      notify: 'true',
-      verify: 'true',
-    });
-</script>
-        </section>
       
     </div>
     <div class="article-info article-info-index">
@@ -471,19 +474,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">sublime</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">插件</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">博客</a>
               </li>
             
             <div class="clearfix"></div>
