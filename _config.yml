@@ -99,7 +99,7 @@ theme: test_1
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/sophistic-cat/sophistic-cat.github.io.git
+  repo: git@github.com:sophistic-cat/sophistic-cat.github.io.git
   branch: master
  
 jsonContent:
